@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: python-app
-          image: eu.gcr.io/iti-seada/gcp-python
+          image: seada98/python-app
           ports:
             - containerPort: 8080
           env:
