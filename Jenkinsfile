@@ -25,7 +25,7 @@ pipeline {
                     sh """
                         gcloud auth activate-service-account --key-file=${config}
                         gcloud container clusters get-credentials my-private-cluster --zone us-central1-c --project iti-seada
-                        kubectl create -Rf Deployment
+                        kubectl apply -Rf Deployment
                     """
                 }
             }
