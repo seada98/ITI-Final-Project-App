@@ -22,3 +22,17 @@ spec:
           env:
             - name: REDIS_HOST
               value: redis-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: load-balancer
+  namespace: app
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
