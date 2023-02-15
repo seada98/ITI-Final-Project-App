@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: python-app
-          image: seada98/python-app
+          image: seada98/python-app:vtag
           ports:
             - containerPort: 8080
           env:
