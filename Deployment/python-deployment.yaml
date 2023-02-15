@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: load-balancer
+  name: python-service
   namespace: app
 spec:
   type: LoadBalancer
