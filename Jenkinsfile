@@ -17,7 +17,6 @@ pipeline {
               }
         }
     
-
         stage('CD'){
             steps {
 
