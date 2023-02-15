@@ -9,9 +9,11 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')])            {
 
                 sh """
+                    cd App
                     docker build . -t seada98/python-app:v$BUILD_NUMBER
                     docker login -u ${USERNAME} -p ${PASSWORD}
                     docker push seada98/python-app:v$BUILD_NUMBER
+                    cd ..
                 """
                 }
               }
